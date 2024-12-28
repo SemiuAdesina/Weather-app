@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Search Section -->
+        <div class="search">
+            <form action="/weather" method="get">
+                <input type="text" name="city" placeholder="Enter city name" spellcheck="false" required>
+                <button type="submit">
+                    <img src="/images/search.png" alt="Search">
+                </button>
+            </form>
+        </div>
+
+        <!-- Error Section -->
+        <% if (error) { %>
+        <div class="error">
+            <p><%= error %></p>
+        </div>
+        <% } %>
+
+        <!-- Weather Section -->
+        <% if (weather) { %>
+        <div class="weather" style="display: block;">
+            <!-- Weather Icon -->
+            <img src="<%= weather.icon %>" class="weather-icon" alt="Weather Icon">
+
+            <!-- Temperature -->
+            <h1 class="temp"><%= weather.temp %>°C</h1>
+
+            <!-- City Name -->
+            <h2 class="city"><%= weather.city %></h2>
+
+            <!-- Weather Description -->
+            <p class="description"><%= weather.description %></p>
+
+            <!-- Weather Details -->
+            <div class="details">
+                <div class="col">
+                    <img src="/images/humidity.png" alt="Humidity">
+                    <div>
+                        <p class="humidity"><%= weather.humidity %>%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="/images/wind.png" alt="Wind Speed">
+                    <div>
+                        <p class="wind"><%= weather.wind %></p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info (Optional) -->
+            <div class="additional-info">
+                <p>Feels Like: <%= weather.feels_like %>°C</p>
+                <p>Pressure: <%= weather.pressure %> hPa</p>
+                <p>Visibility: <%= weather.visibility %> meters</p>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>
