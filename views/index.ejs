@@ -34,6 +34,9 @@
             <!-- Temperature -->
             <h1 class="temp"><%= weather.temp %>°C</h1>
 
+            <!-- Feels Like -->
+            <p class="feels-like">Feels Like: <%= weather.feels_like %>°C</p>
+
             <!-- City Name -->
             <h2 class="city"><%= weather.city %></h2>
 
@@ -58,9 +61,8 @@
                 </div>
             </div>
 
-            <!-- Additional Info (Optional) -->
+            <!-- Additional Info -->
             <div class="additional-info">
-                <p>Feels Like: <%= weather.feels_like %>°C</p>
                 <p>Pressure: <%= weather.pressure %> hPa</p>
                 <p>Visibility: <%= weather.visibility %> meters</p>
             </div>

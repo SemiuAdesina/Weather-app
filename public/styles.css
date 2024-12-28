@@ -140,6 +140,14 @@ body{
     }
 }
 
+.feels-like {
+    font-size: 1.2em;
+    color: #444;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
 /* Styles for phone screens */
 @media screen and (max-width: 480px) { /* Phone screens */
     .card {
