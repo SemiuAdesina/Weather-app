@@ -109,3 +109,86 @@ body{
     margin: 10px 0;
     text-align: center;
 }
+
+/* General styles for smaller screens */
+@media screen and (max-width: 768px) { /* Tablet screens */
+    .card {
+        width: 95%; /* Adjust the card width for smaller devices */
+        padding: 30px 20px;
+    }
+
+    .weather h1 {
+        font-size: 60px; /* Reduce font size for temperature */
+    }
+
+    .weather h2 {
+        font-size: 35px; /* Reduce font size for city name */
+    }
+
+    .details {
+        flex-direction: column; /* Stack details vertically */
+        gap: 20px; /* Add spacing between rows */
+        padding: 0;
+    }
+
+    .col img {
+        width: 30px; /* Reduce icon size */
+    }
+
+    .humidity, .wind {
+        font-size: 24px; /* Adjust detail text size */
+    }
+}
+
+/* Styles for phone screens */
+@media screen and (max-width: 480px) { /* Phone screens */
+    .card {
+        width: 100%; /* Make the card full-width */
+        margin: 20px auto; /* Reduce top margin */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .search input {
+        font-size: 16px; /* Adjust font size */
+        height: 50px; /* Adjust input height */
+    }
+
+    .search button {
+        width: 50px; /* Adjust button size */
+        height: 50px;
+    }
+
+    .search button img {
+        width: 14px; /* Adjust search icon size */
+    }
+
+    .weather-icon {
+        width: 140px; /* Reduce weather icon size */
+    }
+
+    .weather h1 {
+        font-size: 50px; /* Reduce font size for temperature */
+    }
+
+    .weather h2 {
+        font-size: 30px; /* Reduce font size for city name */
+    }
+
+    .description {
+        font-size: 16px; /* Adjust description font size */
+    }
+
+    .details {
+        flex-direction: column; /* Stack details vertically */
+        gap: 15px; /* Add spacing between rows */
+        padding: 0;
+    }
+
+    .col img {
+        width: 25px; /* Reduce icon size further */
+    }
+
+    .humidity, .wind {
+        font-size: 20px; /* Adjust detail text size */
+    }
+}
